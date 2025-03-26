@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Nav from "../components/Nav";
-const blink = "http://localhost:3144"
+const blink = "https://movieflow.onrender.com"
 export default function Login() {
   const nav = useNavigate();
   const [msg,setmsg]=useState("");// this is used for warning message

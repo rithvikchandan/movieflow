@@ -5,9 +5,8 @@ import { createClient } from "@supabase/supabase-js";
 import router from "./routes/uservalidation.js";
 import router2 from "./routes/two.js";
 
-const supabaseUrl = "https://ybnkyixugojfqjlssrvi.supabase.co";
-const supabaseKey =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inlibmt5aXh1Z29qZnFqbHNzcnZpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzE2ODQ5NjMsImV4cCI6MjA0NzI2MDk2M30._mqawcOHTawwkQFiPn_l4YtU3CsykFvhB4JwdxV1dCk";
+const supabaseUrl = process.env.LINK;
+const supabaseKey = process.env.KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
 const app = express();
 const port = 3144;
@@ -16,7 +15,7 @@ app.use(cors());
 
 
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+  res.setHeader("Access-Control-Allow-Origin", "https://movieflow-l6bt.vercel.app/");
   res.setHeader(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"

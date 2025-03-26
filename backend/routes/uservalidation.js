@@ -5,9 +5,8 @@ import { createClient } from "@supabase/supabase-js";
 
 
 
-const supabaseUrl = "https://ybnkyixugojfqjlssrvi.supabase.co";
-const supabaseKey =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inlibmt5aXh1Z29qZnFqbHNzcnZpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzE2ODQ5NjMsImV4cCI6MjA0NzI2MDk2M30._mqawcOHTawwkQFiPn_l4YtU3CsykFvhB4JwdxV1dCk";
+const supabaseUrl = process.env.LINK;
+const supabaseKey = process.env.KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 
@@ -17,7 +16,7 @@ const options = {
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5MTcyYWVkNzU5YTA4Yzg3NzkzM2FlMzMxYmZjZTNkMiIsIm5iZiI6MTczMTEyMzMwNS43MDUsInN1YiI6IjY3MmVkODY5OWZkZGU4YzRiODhiY2E4NyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.gWrxgrIbl2zG3D4Xd3Ea_VTPrmW4BW5RRe4tZtu2AKg'
+    Authorization: process.env.Auth
   }
   };
 router.post("/login", async (req, res) => {

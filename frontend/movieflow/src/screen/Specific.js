@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import img from "../image/mvbg.jpg";
 import "../css/Specific.css";
-const blink = "http://localhost:3144";
+const blink = "https://movieflow.onrender.com";
 export default function Specific() {
   const location = useLocation();
   const [memory,setMem] = useState("");

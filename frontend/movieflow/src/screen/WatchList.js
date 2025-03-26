@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import logo from "../image/Logo.png"
 import "../css/Watchlist.css"
 import Movie from "../components/Movie";
-const blink = "http://localhost:3144"
+const blink = "https://movieflow.onrender.com"
 export default function WatchList() {
      const [data, setdata] = useState([]);
      const [nots,setnots] = useState([]);

@@ -5,7 +5,7 @@ import logo from "../image/Logo.png"
 
 import Movie from '../components/Movie';
 import Set from '../components/Set';
-const blink = "http://localhost:3144"
+const blink = "https://movieflow.onrender.com"
 
 export default function Dash() {
   const [txt, settxt] = useState("");
