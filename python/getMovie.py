@@ -6,11 +6,16 @@ import pickle
 import joblib
 from sklearn.metrics.pairwise import cosine_similarity
 import warnings
+import gdown
 warnings.filterwarnings("ignore")
 
 app = Flask(__name__)
 CORS(app) 
 
+
+url = 'https://drive.google.com/uc?id=1fP1yBEsV8DZxR1j89PVDbFpQGraDydAr'
+output = 'features_matrix.npy'
+gdown.download(url, output, quiet=False)
 features_matrix = np.load("features_matrix.npy")
 movies_encoded = pd.read_csv("movies_encoded.csv")
 encoder = joblib.load("encoder.joblib")
